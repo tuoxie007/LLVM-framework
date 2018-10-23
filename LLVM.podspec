@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
   s.name             = "LLVM"
   s.version          = `git describe --tags`.strip.split('-').first
-  s.summary          = "{s.name}"
+  s.summary          = "LLVM framework prebuilt for iOS"
 
   s.homepage         = "https://github.com/tuoxie007/LLVM-framework"
   s.license          = 'MIT'
