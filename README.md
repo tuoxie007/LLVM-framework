@@ -22,4 +22,17 @@ Then, run the following command:
 $ pod install
 ```
 
-Also, you could manually download and drag the LLVM.framework file to your project.
+## Usage
+
+Click your target and select "Build Settings", then find "User Header Search Paths".
+Add configuration below before importing LLVM head files.
+
+```
+${PODS_ROOT}/Headers/Public/LLVM/LLVM
+```
+
+If you are using in your own Pod project, Add configuration below in podspec file.
+
+```
+spec.pod_target_xcconfig = { 'USER_HEADER_SEARCH_PATHS' => '${PODS_ROOT}/Headers/Public/LLVM/LLVM' }
+```
