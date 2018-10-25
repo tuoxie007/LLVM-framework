@@ -11,8 +11,10 @@ Pod::Spec.new do |s|
 
   type = "static" # static, dynamic
   s.ios.deployment_target = type == "static" ? "7.0" : "8.0"
+  s.watchos.deployment_target = "2.0"
 
   s.source_files = 'Pod/Classes/**/*'
-  s.vendored_frameworks = "vendor/#{type}/#{s.name}.framework"
+  s.ios.vendored_frameworks = "vendor/#{type}/ios/#{s.name}.framework"
+  s.watchos.vendored_frameworks = "vendor/#{type}/watchos/#{s.name}.framework"
 
 end

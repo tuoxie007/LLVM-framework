@@ -34,3 +34,6 @@ Pods/
 Podfile.lock
 
 .*.rp
+
+\#*
+\.\#*
